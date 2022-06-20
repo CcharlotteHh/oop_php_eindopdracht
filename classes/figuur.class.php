@@ -1,6 +1,6 @@
 <?php
 
-class Figuur
+abstract class Figuur
 {
   public $pi = 3.1415;
   protected $x;
@@ -9,8 +9,12 @@ class Figuur
 
   public function __construct($x, $y)
   {
-    $this->x = $x;
-    $this->y = $y;
+    //$this->x = $x;
+    $this-> setX($x);
+    //$this->y = $y;
+
+    $this-> setY($y);
+    
   }
 
   public function setX($x)
@@ -35,7 +39,6 @@ class Figuur
 
   public function berekenOppervlakte()
   {
-    $uitkomst = $this->x * $this->y;
-    return $uitkomst;
+    
   }
 }

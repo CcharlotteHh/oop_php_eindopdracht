@@ -6,10 +6,9 @@ class Cilinder extends Figuur {
   public $h;
   public $r;
 
-  public function __construct($h, $r) {
-    $this->h = $h;
-    $this->r = $r;
-  }
+  public function __construct($h,$r) {
+    parent::__construct($h,$r);
+}
 
   public function getH() {
     return $this->h;
