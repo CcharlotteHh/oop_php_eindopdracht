@@ -2,7 +2,7 @@
 
 abstract class Figuur
 {
-  public $pi = 3.1415;
+  static public $pi = 3.1415;
   protected $x;
   protected $y;
   private $omschrijving = "";

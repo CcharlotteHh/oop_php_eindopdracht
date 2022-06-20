@@ -1,28 +1,28 @@
-<?php 
+<?php
 
 require_once "figuur.class.php";
 
 class Cilinder extends Figuur {
-  public $h;
-  public $r;
 
-  public function __construct($h,$r) {
-    parent::__construct($h,$r);
-}
+    public function __construct($h, $r) {
+        parent::__construct($h ,$r);
+    }
 
-  public function getH() {
-    return $this->h;
-  }
+    public function getH() {
+        return $this->x;
+    }
 
-  public function getR() {
-    return $this->r;
-  }
 
-  public function berekenOppervlakte() {
-    $oppervlakteTweeCirkels = 2 * $this->pi * $this->r * $this->r;
-    $oppervlakteBuis = 2 * $this->pi * $this->r * $this->h;
-    $oppervlakteCilinder = $oppervlakteTweeCirkels + $oppervlakteBuis;
+    public function getR() {
+        return $this->y;
+      }
 
-    return $oppervlakteCilinder;
-  }
+    public function berekenOppervlakte() {
+        $oppervlakteTweeCirkels = 2 * parent::$pi * $this->y * $this->y;
+        $oppervlakteBuis = 2 * parent::$pi * $this->y * $this->x;
+        $oppervlakteCilinder = $oppervlakteTweeCirkels + $oppervlakteBuis;
+
+        return $oppervlakteCilinder;
+    
+    }
 }
